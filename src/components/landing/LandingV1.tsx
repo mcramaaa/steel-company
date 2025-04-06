@@ -10,17 +10,17 @@ export default function LandingV1() {
       <section className="relative w-full h-[80vh] bg-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/imgs/hero.jpeg"
             alt="Steel factory background"
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-30"
             priority
           />
         </div>
         <div className="container mx-auto px-4 z-0">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
-              PT. BAJA KITA
+              Steel Company
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-8">
               Penyedia baja berkualitas tinggi untuk kebutuhan industri dan
