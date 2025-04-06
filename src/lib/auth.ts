@@ -10,6 +10,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
+        console.log("credentials", credentials);
         // This is a mock authentication
         // In a real app, you would verify against your database
         // if (credentials?.email === "admin@bajakita.com" && credentials?.password === "admin123") {
@@ -35,7 +36,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     },
     async session({ session, token }) {
       if (session.user) {
-        session.user.id = token.id as string;
+        session.user.name = token.id as string;
       }
       return session;
     },
