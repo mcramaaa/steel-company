@@ -3,6 +3,8 @@
 import type React from "react";
 
 import { createContext, useContext, useEffect, useState } from "react";
+import PublicHeader from "./public-header";
+import PublicFooter from "./public-footer";
 
 type Theme = "light" | "dark" | "system";
 
@@ -61,7 +63,9 @@ export function ThemeProvider({
   return (
     <ThemeProviderContext.Provider {...props} value={value}>
       <div className="flex flex-col">
+        <PublicHeader />
         <main className="flex-1">{children}</main>
+        <PublicFooter />
       </div>
     </ThemeProviderContext.Provider>
   );
