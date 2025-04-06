@@ -70,12 +70,12 @@ const getProductData = (slug: string) => {
   };
 };
 
-export default function ProductDetailPage({
+export default async function ProductDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const product = getProductData(params.slug);
+  const product = getProductData((await params).slug);
   console.log(product);
 
   return (

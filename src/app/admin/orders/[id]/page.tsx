@@ -23,14 +23,14 @@ import {
   Mail,
 } from "lucide-react";
 
-export default function OrderDetailPage({
+export default async function OrderDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
   // Mock order data - in a real app, you would fetch this from your database
   const order = {
-    id: `#ORD-${params.id}`,
+    id: `#ORD-${(await params).id}`,
     date: "March 22, 2023",
     status: "Processing",
     customer: {

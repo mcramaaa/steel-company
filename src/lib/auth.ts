@@ -1,7 +1,9 @@
+// app/api/auth/[...nextauth]/route.ts
+
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-export const { handlers, auth, signIn, signOut } = NextAuth({
+const handler = NextAuth({
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -10,16 +12,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        console.log("credentials", credentials);
-        // This is a mock authentication
-        // In a real app, you would verify against your database
-        // if (credentials?.email === "admin@bajakita.com" && credentials?.password === "admin123") {
-        //   return {
-        //     id: "1",
-        //     name: "Admin User",
-        //     email: "admin@bajakita.com",
-        //   }
-        // }
+        if (credentials?.email && credentials?.password) {
+          return {
+            id: "1",
+            name: "Admin User",
+            email: "admin@bajakita.com",
+          };
+        }
         return null;
       },
     }),
@@ -42,3 +41,5 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     },
   },
 });
+
+export { handler as GET, handler as POST };
