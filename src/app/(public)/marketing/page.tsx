@@ -19,9 +19,9 @@ export default async function MarketingPage() {
   const team = await getMarketingTeam();
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 ">
       {/* Hero Section */}
-      <section className="relative bg-blue-600 text-white">
+      <section className="relative bg-blue-600 text-white w-full flex flex-col items-center  ">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-90"></div>
         <div className="container relative py-16 md:py-24">
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -62,7 +62,7 @@ export default async function MarketingPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16">
+      <section className="py-16 w-full flex flex-col items-center ">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge className="mb-4">Our Services</Badge>
@@ -286,7 +286,7 @@ export default async function MarketingPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white w-full flex flex-col items-center ">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge className="mb-4">Why Choose Us</Badge>
@@ -344,7 +344,7 @@ export default async function MarketingPage() {
       </section>
 
       {/* Marketing Team */}
-      <section className="py-16">
+      <section className="py-16 w-full flex flex-col items-center ">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge className="mb-4">Our Team</Badge>
@@ -399,7 +399,7 @@ export default async function MarketingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-blue-600 text-white w-full flex flex-col items-center ">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
@@ -429,7 +429,7 @@ export default async function MarketingPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 w-full flex flex-col items-center ">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge className="mb-4">Testimonials</Badge>
@@ -481,7 +481,7 @@ export default async function MarketingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white w-full flex flex-col items-center ">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Badge className="mb-4">FAQ</Badge>
